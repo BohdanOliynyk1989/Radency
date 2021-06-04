@@ -1,0 +1,29 @@
+table, td, th{
+    border: 2px solid black;
+}
+
+th{
+    background-color: lightslategrey;
+}
+
+tr{
+    height: 35px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#wrong{
+    border: 2px solid brown;
+    margin-top: 50px;
+    padding: 25px 100px;
+    background-color: lightcoral;
+    display: none;
+}
