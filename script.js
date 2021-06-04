@@ -128,46 +128,30 @@ function successFunction(data) {
         }
 
         if (index == 9) {
-          style = !item.match(
-            /(2\d{3}\-((0[1-9]{1})|(1[0-2]{1}))\-((0[1-9]{1})|(1[1-9]{1})|(2[0-9]{1})|(3[0-1]{1})))|(((0[1-9]{1})|(1[0-2]{1}))\/((0[1-9]{1})|(1[1-9]{1})|(2[0-9]{1})|(3[0-1]{1}))\/2\d{3})/gim
-          )
+          style = !item.match(/(2\d{3}\-((0[1-9]{1})|(1[0-2]{1}))\-((0[1-9]{1})|(1[1-9]{1})|(2[0-9]{1})|(3[0-1]{1})))|(((0[1-9]{1})|(1[0-2]{1}))\/((0[1-9]{1})|(1[1-9]{1})|(2[0-9]{1})|(3[0-1]{1}))\/2\d{3})/gim)
             ? 'style = "background-color: #EF9898"'
             : "";
 
           let now_date = new Date();
           const now_date_year = now_date.getFullYear();
           const now_date_month = now_date.getMonth() + 1;
-          const now_date_day = now_date.getDay();
+          const now_date_day = now_date.getDate();
 
           const it_spl1 = item.split("/");
           if (it_spl1[2] < now_date_year) {
             style = 'style = "background-color: #EF9898"';
-          } else if (
-            it_spl1[2] >= now_date_year &&
-            it_spl1[0] < now_date_month
-          ) {
+          } else if (it_spl1[2] >= now_date_year && it_spl1[0] < now_date_month) {
             style = 'style = "background-color: #EF9898"';
-          } else if (
-            it_spl1[2] >= now_date_year &&
-            it_spl1[0] >= now_date_month &&
-            it_spl1[1] < now_date_day
-          ) {
+          } else if (it_spl1[2] >= now_date_year && it_spl1[0] >= now_date_month && it_spl1[1] < now_date_day) {
             style = 'style = "background-color: #EF9898"';
           }
 
           const it_spl2 = item.split("-");
           if (it_spl2[0] < now_date_year) {
             style = 'style = "background-color: #EF9898"';
-          } else if (
-            it_spl2[0] >= now_date_year &&
-            it_spl2[1] < now_date_month
-          ) {
+          } else if (it_spl2[0] >= now_date_year && it_spl2[1] < now_date_month) {
             style = 'style = "background-color: #EF9898"';
-          } else if (
-            it_spl2[0] >= now_date_year &&
-            it_spl2[1] >= now_date_month &&
-            it_spl2[2] < now_date_day
-          ) {
+          } else if (it_spl2[0] >= now_date_year && it_spl2[1] >= now_date_month && it_spl2[2] < now_date_day) {
             style = 'style = "background-color: #EF9898"';
           }
         }
