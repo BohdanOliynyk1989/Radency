@@ -1,6 +1,5 @@
 let data_csv = $.ajax({
   url: "MOCK_DATA.csv",
-  typeFile: '*.csv',
   dataType: "text",
 })
   .done(successFunction)
